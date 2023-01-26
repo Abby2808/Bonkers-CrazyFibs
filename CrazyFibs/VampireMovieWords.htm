@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+   <head>
+		<meta charset="utf-8" />
+        <link href="stylesheet.css" type="text/css" rel="stylesheet">
+		<link href="baseStyles.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<h1 class="title">Bonkers</h1>
+	</header>
+
+	<nav>
+	<div class="Navigation">
+		<a href="../Home&MathGame/home.html">HOME</a>
+	</div>
+	<div class="Navigation">
+		<a href="../MatchingGame/matchingGame.html">MATCHING</a>
+	</div>
+	<div class="Navigation">
+		<a href="../CrazyFibs/main.htm">CRAZY FIBS</a>
+	</div>
+	<div class="Navigation">
+		<a href="../Home&MathGame/index.html">MICHAEL'S MATH</a>
+	</div>
+	<div class="Navigation">
+		<a href="../LoginSignUp&QuoteGenerator/Quote Generator.html">QUOTE GENERATOR</a>
+	</div>
+	<div class="Navigation">
+		<a href="../AboutUs/aboutus.htm">ABOUT US</a>
+	</div>
+	<div class="Navigation">
+		<a href="../Feedback/feedback.html">FEEDBACK</a>
+	</div>
+	<div class="Navigation">
+		<a href="../LoginSignUp&QuoteGenerator/Login_or_Create_Account.html">SIGN-UP/LOGIN</a>
+	</div>
+	</nav>
+
+	<div id = "libs">
+		<h1>VAMPIRE MOVIE</h1>
+	<div class = "row">
+	<form>
+	<ul>
+		<div class = "column">
+			<li>Noun: <input type="text" id="noun1"></li>
+			<li>Adjective: <input type="text" id="adjective1"></li>
+			<li>Female Celebrity: <input type="text" id="female"></li>
+			<li>Adjective: <input type="text" id="adjective2"></li>
+			<li>Noun: <input type="text" id="noun2"></li>
+			<li>Color: <input type="text" id="color"></li>
+			<li>Adjective: <input type="text" id="adjective3"></li>
+			<li>Plural Noun: <input type="text" id="plural"></li>
+			<li>Animal: <input type="text" id="animal"></li>
+			<li>Noun: <input type="text" id="noun3"></li>
+		</div>
+		<div class = "column">
+			<li>Food: <input type="text" id="food"></li>
+			<li>Adjective: <input type="text" id="adjective4"></li>
+			<li>Male Celebrity: <input type="text" id="male"></li>
+			<li>Place: <input type="text" id="place"></li>
+			<li>Adjective: <input type="text" id="adjective5"></li>
+			<li>Noun: <input type="text" id="noun4"></li>
+			<li>Organ: <input type="text" id="organ"></li>
+			<li>Verb Ending With -ING: <input type="text" id="verb-ing"></li>
+			<li>Adjective: <input type="text" id="adjective6"></li>
+		</div>
+	</ul>
+	</div><!-- 'row' end -->
+	<section>
+	<input type="reset" id="restart" value="Restart">
+	</form>
+	<button id="create-button" onclick="audio.play()">Create it!</button>
+	<a href="main.htm" id="return">Go Back</a>
+	</section><!-- 'buttons' SECTIONS end -->
+	</div><!-- 'libs' end -->
+
+	<div id="storyLine">
+	<p>
+		<span id="story"></span>
+		<span id="story2"></span>
+		<span id="story3"></span>
+		<span id="story4"></span>
+		<span id="story5"></span>
+		<span id="story6"></span>
+	</p></div>
+
+	<script type="text/javascript">
+		const audio = new Audio();
+		audio.src = "./BRUH.mp3";
+	</script>
+
+	<script type="text/javascript">
+		var createButton = document.getElementById('create-button');
+		var create = function() {
+		  var storyDiv = document.getElementById("story");
+		  var storyDiv2 = document.getElementById("story2");
+		  var storyDiv3 = document.getElementById("story3");
+		  var storyDiv4 = document.getElementById("story4");
+		  var storyDiv5 = document.getElementById("story5");
+		  var storyDiv6 = document.getElementById("story6");
+			var noun1 = document.getElementById("noun1");
+			var adject1 = document.getElementById("adjective1");
+			var female = document.getElementById("female");
+			var adject2 = document.getElementById("adjective2");
+			var noun2 = document.getElementById("noun2");
+			var color = document.getElementById("color");
+			var adject3 = document.getElementById("adjective3");
+			var plural = document.getElementById("plural");
+			var animal = document.getElementById("animal");
+			var noun3 = document.getElementById("noun3");
+			var food = document.getElementById("food");
+			var adject4 = document.getElementById("adjective4");
+			var male = document.getElementById("male");
+			var place = document.getElementById("place");
+			var adject5 = document.getElementById("adjective5");
+			var noun4 = document.getElementById("noun4");
+			var organ = document.getElementById("organ");
+			var verbing = document.getElementById("verb-ing");
+			var adject6 = document.getElementById("adjective6");
+
+			storyDiv.innerHTML = "My friends and I just saw the latest horror movie, 'The Dark " + noun1.value + ".'  It began with a(n) " + adject1.value + " girl, played by " + female.value + ", moving to a new town.";
+			storyDiv2.innerHTML = "She soon discovers the town was full of vampires, " + adject2.value + " " + noun2.value + "-like creatures that had " + color.value + " skin and " + adject3.value + "  fangs.";
+			storyDiv3.innerHTML = "They feed on the blood of " + plural.value + " and could change into a(n) " + animal.value + ". Their only weakness was the touch of " + noun3.value + "-light and the taste of " + food.value + "."; 
+			storyDiv4.innerHTML = "She teams up with a(n) " + adject4.value + " boy, played by " + male.value + ", and they find the vampire's lair at " + place.value + "."; 
+			storyDiv5.innerHTML = "After a(n) " + adject5.value + " fight with the vampire army, the girl finally battles the leader. She stabbed a " + noun4.value + " stake through his " + organ.value + " and he died.";
+			storyDiv6.innerHTML = "The film ended with the boy and girl " + verbing.value + " through the vampire-free town. That movie was so " + adject6.value + ", I loved it.";
+		};
+		createButton.addEventListener('click', create);
+	</script>
+	
+	<footer>
+		<p>Bonkers&#169; 2022; All Rights Reserved</p>
+	</footer>
+</body>
+</html>

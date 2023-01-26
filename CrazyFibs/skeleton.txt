@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+   <head>
+		<meta charset="utf-8" />
+        <link href="stylesheet.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+	<div id = "libs">
+		<h1></h1>
+	<div class = "row">
+	<form>
+	<ul>
+		<div class = "column">
+			<li></li>
+		</div>
+		<div class = "column">
+			<li></li>
+		</div>
+	</ul>
+	</div><!-- 'row' end -->
+	<section>
+	<input type="reset" id="restart" value="Restart">
+	</form>
+	<button id="create-button">Create it!</button>
+	<a href="main.htm" id="return">Go Back</a>
+	</sections><!-- 'buttons' SECTIONS end -->
+	</div><!-- 'libs' end -->
+
+	<div id="storyLine">
+	<p>
+		<span id="story"></span>
+		.....................
+	</p></div>
+
+	<script type="text/javascript">
+		var createButton = document.getElementById('create-button');
+		var create = function() {
+		  var storyDiv = document.getElementById("story");
+			........
+
+			storyDiv.innerHTML = ...............
+		};
+		createButton.addEventListener('click', create);
+	</script>
+
+</body>
+</html>

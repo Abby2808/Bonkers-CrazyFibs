@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8" />
+        <link href="stylesheet.css" type="text/css" rel="stylesheet">
+		<link href="baseStyles.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<h1 class="title">Bonkers</h1>
+	</header>
+
+	<nav>
+	<div class="Navigation">
+		<a href="../Home&MathGame/home.html">HOME</a>
+	</div>
+	<div class="Navigation">
+		<a href="../MatchingGame/matchingGame.html">MATCHING</a>
+	</div>
+	<div class="Navigation">
+		<a href="../CrazyFibs/main.htm">CRAZY FIBS</a>
+	</div>
+	<div class="Navigation">
+		<a href="../Home&MathGame/index.html">MICHAEL'S MATH</a>
+	</div>
+	<div class="Navigation">
+		<a href="../LoginSignUp&QuoteGenerator/Quote Generator.html">QUOTE GENERATOR</a>
+	</div>
+	<div class="Navigation">
+		<a href="../AboutUs/aboutus.htm">ABOUT US</a>
+	</div>
+	<div class="Navigation">
+		<a href="../Feedback/feedback.html">FEEDBACK</a>
+	</div>
+	<div class="Navigation">
+		<a href="../LoginSignUp&QuoteGenerator/Login_or_Create_Account.html">SIGN-UP/LOGIN</a>
+	</div>
+	</nav>
+
+	<div id = "libs">
+		<h1>SUPERHEROES</h1>
+	<div class = "row">
+	<form>
+	<ul>
+		<div class = "column">
+			<li>Noun: <input type="text" id="noun1"></li>
+			<li>Adjective: <input type="text" id="adjective1"></li>
+			<li>Noun: <input type="text" id="noun2"></li>
+			<li>Adjective: <input type="text" id="adjective2"></li>
+			<li>Adjective: <input type="text" id="adjective3"></li>
+			<li>Noun: <input type="text" id="noun3"></li>
+			<li>Number: <input type="text" id="number"></li>
+			<li>Plural Noun: <input type="text" id="plural"></li>
+			<li>Body Part: <input type="text" id="body-part"></li>
+			<li>Adjective: <input type="text" id="adjective4"></li>
+			<li>Noun: <input type="text" id="noun5"></li>
+		</div>
+		<div class = "column">
+			<li>Color: <input type="text" id="color"></li>
+			<li>Adjective: <input type="text" id="adjective5"></li>
+			<li>Noun: <input type="text" id="noun6"></li>
+			<li>Plural Noun: <input type="text" id="plural2"></li>
+			<li>Adjective: <input type="text" id="adjective6"></li>
+			<li>Noun: <input type="text" id="noun7"></li>
+			<li>Animal: <input type="text" id="animal"></li>
+			<li>Place: <input type="text" id="place"></li>
+			<li>Adjective: <input type="text" id="adjective7"></li>
+			<li>Noun: <input type="text" id="noun8"></li>
+			<li>Noun: <input type="text" id="noun9"></li>
+		</div>
+	</ul>
+	</div><!-- 'row' end -->
+	<section>
+		<input type="reset" id="restart" value="RESTART">
+		</form><!-- end of form -->
+		<button id="create-button" onclick="audio.play()">CREATE IT!</button>
+		<a href="main.htm" id="return">GO BACK</a>
+	</section><!-- 'buttons' SECTIONS end -->
+	</div><!-- 'libs' end -->
+
+	<div id="storyLine">
+	<p>
+		<span id="story"></span>
+		<span id="story2"></span>
+		<span id="story3"></span>
+		<span id="story4"></span>
+		<span id="story5"></span>
+		<span id="story6"></span>
+		<span id="story7"></span>
+	</p></div>
+
+	<script type="text/javascript">
+		const audio = new Audio();
+		audio.src = "./BRUH.mp3";
+	</script>
+
+	<script type="text/javascript">
+		var createButton = document.getElementById('create-button');
+		var create = function() {
+		  var storyDiv = document.getElementById("story");
+		  var storyDiv2 = document.getElementById("story2");
+		  var storyDiv3 = document.getElementById("story3");
+		  var storyDiv4 = document.getElementById("story4");
+		  var storyDiv5 = document.getElementById("story5");
+		  var storyDiv6 = document.getElementById("story6");
+		  var storyDiv7 = document.getElementById("story7");
+			var noun1 = document.getElementById("noun1");
+			var adject1 = document.getElementById("adjective1");
+			var noun2 = document.getElementById("noun2");
+			var adject2 = document.getElementById("adjective2");
+			var adject3 = document.getElementById("adjective3");
+			var noun3 = document.getElementById("noun3");
+			var number = document.getElementById("number");
+			var plural = document.getElementById("plural");
+			var body = document.getElementById("body-part");
+			var adject4 = document.getElementById("adjective4");
+			var noun5 = document.getElementById("noun5");
+			var color = document.getElementById("color");
+			var adject5 = document.getElementById("adjective5");
+			var noun6 = document.getElementById("noun6");
+			var plura2 = document.getElementById("plural2");
+			var adject6 = document.getElementById("adjective6");
+			var noun7 = document.getElementById("noun7");
+			var animal = document.getElementById("animal");
+			var place = document.getElementById("place");
+			var adject7 = document.getElementById("adjective7");
+			var noun8 = document.getElementById("noun8");
+			var noun9 = document.getElementById("noun9");
+		  
+			storyDiv.innerHTML = "Oh No! " + noun1.value + " City is under attack by the " + adject1.value + " Doctor " + noun2.value + ".";
+			storyDiv2.innerHTML = "Who will save us? But wait! Look to the sky! It's the " + adject2.value + " five coming to the rescue.";
+			storyDiv3.innerHTML = "Led by the " + adject3.value + " Captain " + noun3.value + " who is so strong, he can lift " + number.value + " " + plural.value + " with just one " + body.value + "."; 
+			storyDiv4.innerHTML = "Alongside him is the " + adject4.value + " Mr. " + noun5.value + " who runs so fast that when he passes by, you only see a " + color.value + " streak.";
+			storyDiv5.innerHTML = "Next is the " + adject5.value + " " + noun6.value + " Lady who flies so high all the " + plural2.value + " look like ants to her.";
+			storyDiv6.innerHTML = "The " + adject6.value + " " + noun7.value + " man can shapeshift into any animal. He once spent the whole day as a(n) " + animal.value + " at the " + place.value + ".";
+			storyDiv7.innerHTML = "And finally, the " + adject7.value + " " + noun8.value + " girl who can move any object with her mind, even a " + noun9.value + ". We’re counting on you, Superheroes!";
+		};
+		createButton.addEventListener('click', create);
+	</script>
+	
+	<footer>
+		<p>Bonkers&#169; 2022; All Rights Reserved</p>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+   <head>
+		<meta charset="utf-8" />
+        <link href="stylesheet.css" type="text/css" rel="stylesheet">
+		<link href="baseStyles.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<h1 class="title">Bonkers</h1>
+	</header>
+
+	<nav>
+	<div class="Navigation">
+		<a href="../Home&MathGame/home.html">HOME</a>
+	</div>
+	<div class="Navigation">
+		<a href="../MatchingGame/matchingGame.html">MATCHING</a>
+	</div>
+	<div class="Navigation">
+		<a href="../CrazyFibs/main.htm">CRAZY FIBS</a>
+	</div>
+	<div class="Navigation">
+		<a href="../Home&MathGame/index.html">MICHAEL'S MATH</a>
+	</div>
+	<div class="Navigation">
+		<a href="../LoginSignUp&QuoteGenerator/Quote Generator.html">QUOTE GENERATOR</a>
+	</div>
+	<div class="Navigation">
+		<a href="../AboutUs/aboutus.htm">ABOUT US</a>
+	</div>
+	<div class="Navigation">
+		<a href="../Feedback/feedback.html">FEEDBACK</a>
+	</div>
+	<div class="Navigation">
+		<a href="../LoginSignUp&QuoteGenerator/Login_or_Create_Account.html">SIGN-UP/LOGIN</a>
+	</div>
+	</nav>
+
+	<div id = "libs">
+		<h1>FAIRY TALE</h1>
+	<div class = "row">
+	<form>
+	<ul>
+		<div class = "column">
+			<li>Adjective: <input type="text" id="adjective1"></li>
+			<li>Noun: <input type="text" id="noun1"></li>
+			<li>Adjective: <input type="text" id="adjective2"></li>
+			<li>Plural Noun: <input type="text" id="plural1"></li>
+			<li>Plural Noun: <input type="text" id="plural2"></li>
+			<li>Verb Ending With -ING: <input type="text" id="verb-ing"></li>
+			<li>Animal: <input type="text" id="animal1"></li>
+			<li>Place: <input type="text" id="place"></li>
+			<li>Past Tense Verb: <input type="text" id="pastverb"></li>
+		</div>
+		<div class = "column">
+			<li>Adjective: <input type="text" id="adjective3"></li>
+			<li>Adjective: <input type="text" id="adjective4"></li>
+			<li>Animal: <input type="text" id="animal2"></li>
+			<li>Number: <input type="text" id="number"></li>
+			<li>Noun: <input type="text" id="noun2"></li>
+			<li>Size: <input type="text" id="size"></li>
+			<li>Weapon: <input type="text" id="weapon"></li>
+			<li>Room: <input type="text" id="room"></li>
+			<li>Adverb: <input type="text" id="adverb"></li>
+		</div>
+	</ul>
+	</div><!-- 'row' end -->
+	<section>
+	<input type="reset" id="restart" value="Restart">
+	</form>
+	<button id="create-button" onclick="audio.play()">Create it!</button>
+	<a href="main.htm" id="return">Go Back</a>
+	</section><!-- 'buttons' SECTIONS end -->
+	</div><!-- 'libs' end -->
+
+	<div id="storyLine">
+	<p>
+		<span id="story"></span>
+		<span id="story2"></span>
+		<span id="story3"></span>
+		<span id="story4"></span>
+		<span id="story5"></span>
+		<span id="story6"></span>
+		<span id="story7"></span>
+		<span id="story8"></span>
+	</p></div>
+
+	<script type="text/javascript">
+		const audio = new Audio();
+		audio.src = "./BRUH.mp3";
+	</script>
+
+	<script type="text/javascript">
+		var createButton = document.getElementById('create-button');
+		var create = function() {
+		  var storyDiv = document.getElementById("story");
+		  var storyDiv2 = document.getElementById("story2");
+		  var storyDiv3 = document.getElementById("story3");
+		  var storyDiv4 = document.getElementById("story4");
+		  var storyDiv5 = document.getElementById("story5");
+		  var storyDiv6 = document.getElementById("story6");
+		  var storyDiv7 = document.getElementById("story7");
+		  var storyDiv8 = document.getElementById("story8");
+			var adject1 = document.getElementById("adjective1");
+			var noun1 = document.getElementById("noun1");
+			var adject2 = document.getElementById("adjective2");
+			var plural1 = document.getElementById("plural1");
+			var plural2 = document.getElementById("plural2");
+			var verbing = document.getElementById("verb-ing");
+			var animal1 = document.getElementById("animal1");
+			var place = document.getElementById("place");
+			var pastverb = document.getElementById("pastverb");
+			var adject3 = document.getElementById("adjective3");
+			var adject4 = document.getElementById("adjective4");
+			var animal2 = document.getElementById("animal2");
+			var number = document.getElementById("number");
+			var noun2 = document.getElementById("noun2");
+			var size = document.getElementById("size");
+			var weapon = document.getElementById("weapon");
+			var room = document.getElementById("room");
+			var adverb = document.getElementById("adverb");
+
+			storyDiv.innerHTML = "Once upon a time, there was the " + adject1.value + "  Kingdom of " + noun1.value + ". The king and queen who ruled over the land had a(n) " + adject2.value +  " young daughter.";
+			storyDiv2.innerHTML = "She had long hair the color of " + plural1.value + " and eyes the color of " + plural2.value + "."; 
+			storyDiv3.innerHTML = "The princess was so talented at " + verbing.value + " that she caught the attention of the giant " + animal1.value + " that hid in a faraway " + place.value + ".";
+			storyDiv4.innerHTML = "The creature snatched the princess and " + pastverb.value +  " away to its home.";
+			storyDiv5.innerHTML = "The king and queen were so desperate to have their daughter back, they asked the help of a(n) " + adject3.value + " knight.";
+			storyDiv6.innerHTML = "The knight vowed to travel across the land on his " + adject4.value + " " + animal2.value + " to bring the princess home. He traveled " + number.value + " day(s) and night(s) until he finally found the creature's lair.";
+			storyDiv7.innerHTML = "He battled the " + noun2.value + " - breathing monster with his " + size.value + " " + weapon.value + " until he was finally victorious."; 
+			storyDiv8.innerHTML = "The knight found the princess locked in the " + room.value + ", brought her back to the kingdom, and they lived " + adverb.value + " Ever After!";
+		};
+		createButton.addEventListener('click', create);
+	</script>
+	
+	<footer>
+		<p>Bonkers&#169; 2022; All Rights Reserved</p>
+	</footer>
+</body>
+</html>
